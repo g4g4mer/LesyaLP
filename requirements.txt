@@ -1,3 +1,2 @@
 vkbottle==2.7.12
 loguru
-json
