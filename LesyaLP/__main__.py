@@ -40,10 +40,7 @@ text = f"""
     """
 
 logger.log("[LesyaLP]", text)
-<<<<<<< HEAD
 user.set_blueprints(*commands_bp, error_bp)
 user.run_polling()
-=======
 user.set_blueprints(*commands_bp)
 user.run_polling()
->>>>>>> 80855a377d3df4d4f41b2276bba33834cc97992c
