@@ -4,6 +4,7 @@ import json
 with open('config.json', encoding='utf-8') as f:
 	jj = json.load(f)
 	prefix = jj["prefix"]
+	captcha_key = jj["captcha_key"]
 
 async def edit_message(
         message: Message,

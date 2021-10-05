@@ -31,8 +31,8 @@ async def handler(message: Message):
 		b = re.search('Ваши питомцы победили!', message.text)
 			
 		if b != None:
-			await message('бой')
+			await user.api.messages.send(random_id=0, peer_id=message.peer_id, message='бой')
 		if a != None:
-			await message('бой')
+			await user.api.messages.send(random_id=0, peer_id=message.peer_id, message='бой')
 	elif war == False:
 		pass

@@ -4,10 +4,14 @@ import json
 from loguru import logger
 import re
 from .commands.utils import prefix
+from .errors import error_bp
 
 with open("config.json", "r", encoding="utf-8") as tok:
 	data = json.load(tok)
 	token = data["token"]
+
+logger.catch()
+loglevel = logger.level("[LesyaLP]", no=38, color="blue")
 
 		
 if len(token) < 85:
@@ -35,6 +39,6 @@ text = f"""
     ✦═══════════════════════════════⋞⋆━━━━━━━━━━━━━━━━━━━━━━⋆⋟═══════════════════════════════✦
     """
 
-
-user.set_blueprints(*commands_bp)
+logger.log("[LesyaLP]", text)
+user.set_blueprints(*commands_bp, error_bp)
 user.run_polling()
