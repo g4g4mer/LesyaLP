@@ -1,12 +1,6 @@
 {
-<<<<<<< HEAD
-     "token": "2db5681eb6ba46b8798695bbabbdf8fd09b22bdb90dec3067d9afca6e463f5de6f5beda665871c4fa93ee",
-     "prefix": ".лк ",
-     "captcha_key": "ключ ахахаха",
-     "Бонус": true
+    "token": "5194f934effd097aa53b6005622ef1410aacb176cf38967194ac4289df064710f5e46e8e34e77bfdbad43",
+    "prefix": ".\u043b\u043a ",
+    "captcha_key": "",
+    "\u0411\u043e\u043d\u0443\u0441": true
 }
-=======
-    "token": "",
-    "prefix": ".лб "
-}
->>>>>>> 80855a377d3df4d4f41b2276bba33834cc97992c

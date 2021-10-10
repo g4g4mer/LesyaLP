@@ -1,3 +1,6 @@
-from . import captcha
+from . import captcha, authorization_failed
 
-error_bp = captcha.user
+error_bp = (
+	captcha.user,
+	authorization_failed.user
+)

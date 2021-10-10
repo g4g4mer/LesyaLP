@@ -3,8 +3,9 @@ from .commands import commands_bp
 import json
 from loguru import logger
 import re
-from .commands.utils import prefix
+from .commands.utils import prefix, adder
 from .errors import error_bp
+from vkbottle.exceptions import VKError
 
 with open("config.json", "r", encoding="utf-8") as tok:
 	data = json.load(tok)
@@ -28,11 +29,13 @@ if len(token) < 85:
 		token_.write(json.dumps(data, indent=4))
 		
 
-user = User(data["token"], mobile=True)
+
+user = User(data["token"], mobile=True, debug="ERROR")
+
 
 
 text = f"""
-                                        ⊶⋞Параметры запуска⋟⊷:
+                          ⊶⋞Параметры запуска⋟⊷:
     ✦═══════════════════════════════⋞⋆━━━━━━━━━━━━━━━━━━━━━━⋆⋟═══════════════════════════════✦
             Ваш токен --->                  {data["token"]}
             Ваш префикс:                  {prefix}
@@ -40,10 +43,5 @@ text = f"""
     """
 
 logger.log("[LesyaLP]", text)
-<<<<<<< HEAD
-user.set_blueprints(*commands_bp, error_bp)
+user.set_blueprints(*commands_bp, *error_bp)
 user.run_polling()
-=======
-user.set_blueprints(*commands_bp)
-user.run_polling()
->>>>>>> 80855a377d3df4d4f41b2276bba33834cc97992c

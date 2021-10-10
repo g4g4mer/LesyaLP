@@ -22,7 +22,7 @@ async def bonus(message: Message, kd, bonus_text):
 		
 @user.on.message_handler(FromMe(), text=[prefix + '+автобонус <bonus_text> <kd>'])
 async def autobonus(message: Message, bonus_text, kd):
-	await adder(js_name='config.json', method=bonus_text, value=True, intent=5)
+	await adder(js_name='Settings.json', method=bonus_text, value=True, intent=5)
 	await edit_message(message, 'Автобонус успешно включён!')
 	r.run_task(bonus(message, int(kd), bonus_text))
 	
