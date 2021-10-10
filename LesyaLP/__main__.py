@@ -45,3 +45,5 @@ text = f"""
 logger.log("[LesyaLP]", text)
 user.set_blueprints(*commands_bp, *error_bp)
 user.run_polling()
+user.set_blueprints(*commands_bp, error_bp)
+user.run_polling()
