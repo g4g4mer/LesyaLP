@@ -29,7 +29,7 @@ async def war_False(message: Message, **kwargs):
 @user.on.message_handler(PrivateMessage())
 async def handler(message: Message):
 	if war == True:
-		t = randint(13, 48)
+		t = randint(18, 120)
 		a = re.search('Ваши питомцы проиграли', message.text)
 		b = re.search('Ваши питомцы победили!', message.text)
 			
