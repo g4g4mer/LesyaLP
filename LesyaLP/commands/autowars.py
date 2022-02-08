@@ -25,6 +25,8 @@ async def war_False(message: Message, **kwargs):
 	
 	await edit_message(message, 'Автобои отключены')
 
+ 
+
 @user.on.message_handler(PrivateMessage())
 async def handler(message: Message):
 	if war == True:
